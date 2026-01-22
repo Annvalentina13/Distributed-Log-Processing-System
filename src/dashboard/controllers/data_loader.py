@@ -5,7 +5,14 @@ import glob
 from datetime import datetime, timedelta
 
 @st.cache_data
-def load_raw_data_v2(data_dir: str = "data/processed") -> pd.DataFrame:
+def load_raw_data_v2(
+    data_dir: str = os.path.join(
+        os.path.dirname(__file__),
+        "..",
+        "data",
+        "logs.parquet"
+    )
+) -> pd.DataFrame:
     """Load processed log data"""
     try:
         # Try Parquet first

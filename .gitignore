@@ -1,28 +1,15 @@
-# Python
+# Python cache
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-.env
-venv/
-.env/
 
-# Streamlit
-.streamlit/secrets.toml
+# Jupyter
+.ipynb_checkpoints/
 
-# Spark
-spark-warehouse/
-*.crc
-
-# Logs & Data
-logs/
-*.log
-data/raw/
-data/processed/
+# Data & logs
+data/
+reports/
+*.parquet
+*.db
 
 # OS
 .DS_Store
-Thumbs.db
-
-# VS Code
-.vscode/

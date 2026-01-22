@@ -30,7 +30,7 @@ def load_css(file_name):
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # Load External CSS
-css_path = Path("src/dashboard/assets/css/style.css")
+css_path = Path(__file__).parent / "assets" / "css" / "style.css"
 if css_path.exists():
     load_css(str(css_path))
 else:
